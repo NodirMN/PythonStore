@@ -1,56 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
+{% extends 'products/base.html' %}
+{% load staticfiles %}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{% block css %}
+<link href="{% static 'css/products.css' %}" rel="stylesheet">
+{% endblock %}
 
-    <title>Store - Каталог</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/static/css/products.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Store</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="products.html">Каталог</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="auth/login.html">Войти <i class="fas fa-sign-in-alt"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Page Content -->
+{% block content %}
     <div class="container">
-
+    
         <div class="row">
-
+    
             <div class="col-lg-3">
-
+    
                 <h1 class="my-4">Store</h1>
                 <div class="list-group">
                     <a href="#" class="list-group-item">Новинки</a>
@@ -59,12 +22,12 @@
                     <a href="#" class="list-group-item">Аксессуары</a>
                     <a href="#" class="list-group-item">Подарки</a>
                 </div>
-
+    
             </div>
             <!-- /.col-lg-3 -->
-
+    
             <div class="col-lg-9">
-
+    
                 <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -73,13 +36,16 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <img class="d-block img-fluid" src="/static/vendor/img/slides/slide-1.jpg" alt="First slide">
+                            <img class="d-block img-fluid" src="{% static 'vendor/img/slides/slide-1.jpg' %}"
+                                alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="/static/vendor/img/slides/slide-2.jpg" alt="Second slide">
+                            <img class="d-block img-fluid" src="{% static 'vendor/img/slides/slide-2.jpg' %}"
+                                alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" src="/static/vendor/img/slides/slide-3.jpg" alt="Third slide">
+                            <img class="d-block img-fluid" src="{% static 'vendor/img/slides/slide-3.jpg' %}"
+                                alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -91,14 +57,14 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-
+    
                 <div class="row">
-
+    
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
                             <a href="#">
                                 <img class="card-img-top"
-                                    src="/static/vendor/img/products/Adidas-hoodie.png"
+                                    src="{% static 'vendor/img/products/Adidas-hoodie.png' %} "
                                     alt="">
                             </a>
                             <div class="card-body">
@@ -113,12 +79,12 @@
                             </div>
                         </div>
                     </div>
-
+    
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
                             <a href="#">
                                 <img class="card-img-top"
-                                    src="/static/vendor/img/products/Blue-jacket-The-North-Face.png" alt="">
+                                    src="{% static 'vendor/img/products/Blue-jacket-The-North-Face.png' %}" alt="">
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">
@@ -134,12 +100,12 @@
                             </div>
                         </div>
                     </div>
-
+    
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
                             <a href="#">
                                 <img class="card-img-top"
-                                    src="/static/vendor/img/products/Brown-sports-oversized-top-ASOS-DESIGN.png"
+                                    src="{% static 'vendor/img/products/Brown-sports-oversized-top-ASOS-DESIGN.png' %}"
                                     alt="">
                             </a>
                             <div class="card-body">
@@ -154,12 +120,12 @@
                             </div>
                         </div>
                     </div>
-
+    
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
                             <a href="#">
                                 <img class="card-img-top"
-                                    src="/static/vendor/img/products/Black-Nike-Heritage-backpack.png"
+                                    src="{% static 'vendor/img/products/Black-Nike-Heritage-backpack.png' %}"
                                     alt="">
                             </a>
                             <div class="card-body">
@@ -174,12 +140,12 @@
                             </div>
                         </div>
                     </div>
-
+    
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
                             <a href="#">
                                 <img class="card-img-top"
-                                    src="/static/vendor/img/products/Black-Dr-Martens-shoes.png"
+                                    src="{% static 'vendor/img/products/Black-Dr-Martens-shoes.png '%}"
                                     alt="">
                             </a>
                             <div class="card-body">
@@ -194,12 +160,12 @@
                             </div>
                         </div>
                     </div>
-
+    
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
                             <a href="#">
                                 <img class="card-img-top"
-                                    src="/static/vendor/img/products/Dark-blue-wide-leg-ASOs-DESIGN-trousers.png"
+                                    src="{% static 'vendor/img/products/Dark-blue-wide-leg-ASOs-DESIGN-trousers.png'%}"
                                     alt="">
                             </a>
                             <div class="card-body">
@@ -214,9 +180,9 @@
                             </div>
                         </div>
                     </div>
-
+    
                 </div>
-
+    
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
                         <li class="page-item disabled">
@@ -230,29 +196,19 @@
                         </li>
                     </ul>
                 </nav>
-
+    
             </div>
-
+    
         </div>
-
+    
     </div>
-    <!-- /.container -->
+{% endblock %}
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Store 2021</p>
-        </div>
-        <!-- /.container -->
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="/static/vendor/jquery/jquery.min.js"></script>
-    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- FontAwesome script -->
-    <script src="/static/vendor/fontawesome/fontawesome-icons.js" crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+{% block footer %}
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; Store 2021</p>
+            </div>
+            <!-- /.container -->
+        </footer>
+{% endblock %}
